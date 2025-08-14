@@ -1,0 +1,335 @@
+/* Responsive Design - Mobile First */
+
+/* Tablets e telas médias (768px e abaixo) */
+@media screen and (max-width: 768px) {
+    /* Navegação Mobile */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+        gap: 1rem;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .nav-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Pesquisa mobile */
+    .search-container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #search-input {
+        width: 250px;
+    }
+
+    /* Hero section mobile */
+    .slide-content h1 {
+        font-size: 2rem;
+    }
+
+    .slide-content p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .carousel-btn {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+
+    .prev-btn {
+        left: 10px;
+    }
+
+    .next-btn {
+        right: 10px;
+    }
+
+    /* Portfolio mobile */
+    .filter-buttons {
+        gap: 0.5rem;
+        padding: 0 1rem;
+    }
+
+    .filter-btn {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Contact mobile */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    /* Modal mobile */
+    .modal-content {
+        margin: 20% auto;
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    /* Toast mobile */
+    .toast-container {
+        right: 10px;
+        left: 10px;
+    }
+
+    .toast {
+        margin-bottom: 5px;
+    }
+}
+
+/* Smartphones (480px e abaixo) */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Header mobile pequeno */
+    .nav-container {
+        padding: 0 15px;
+    }
+
+    .nav-logo h2 {
+        font-size: 1.3rem;
+    }
+
+    /* Hero muito pequeno */
+    .hero {
+        height: 500px;
+    }
+
+    .slide-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .slide-content p {
+        font-size: 0.9rem;
+    }
+
+    .cta-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    /* Portfolio muito pequeno */
+    .portfolio h2,
+    .contact h2 {
+        font-size: 2rem;
+    }
+
+    .filter-buttons {
+        gap: 0.3rem;
+    }
+
+    .filter-btn {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .projects-grid {
+        gap: 1rem;
+    }
+
+    .project-card {
+        margin: 0 10px;
+    }
+
+    /* Formulário muito pequeno */
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.6rem;
+    }
+
+    .submit-btn {
+        padding: 0.8rem 1.5rem;
+    }
+
+    /* Modal muito pequeno */
+    .modal-content {
+        margin: 30% auto;
+        padding: 1rem;
+    }
+
+    /* Botão voltar ao topo menor */
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+/* Telas grandes (1200px e acima) */
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .nav-container {
+        max-width: 1400px;
+    }
+
+    .slide-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .slide-content p {
+        font-size: 1.3rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact-content {
+        gap: 4rem;
+    }
+}
+
+/* Telas extra grandes (1600px e acima) */
+@media screen and (min-width: 1600px) {
+    .container {
+        max-width: 1600px;
+    }
+
+    .nav-container {
+        max-width: 1600px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Orientação landscape em dispositivos móveis */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        height: 400px;
+    }
+
+    .slide-content h1 {
+        font-size: 2rem;
+    }
+
+    .slide-content p {
+        font-size: 1rem;
+    }
+
+    .carousel-btn {
+        font-size: 1.3rem;
+        padding: 0.4rem;
+    }
+}
+
+/* Ajustes para impressão */
+@media print {
+    .navbar,
+    .carousel-btn,
+    .carousel-indicators,
+    .filter-buttons,
+    .back-to-top,
+    .toast-container,
+    .modal {
+        display: none !important;
+    }
+
+    .hero {
+        margin-top: 0;
+        height: auto;
+        padding: 2rem 0;
+    }
+
+    .carousel-slide {
+        position: static;
+        opacity: 1;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+
+    .container {
+        max-width: none;
+        padding: 0;
+    }
+}
+
+/* Acessibilidade - Redução de movimento */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .carousel-slide {
+        transition: none;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Alto contraste */
+@media (prefers-contrast: high) {
+    :root {
+        --shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        --border-color: #000000;
+    }
+
+    .dark-theme {
+        --shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+        --border-color: #ffffff;
+    }
+
+    .project-card,
+    .contact-form,
+    .modal-content {
+        border: 2px solid var(--border-color);
+    }
+}

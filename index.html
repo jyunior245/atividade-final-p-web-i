@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Web - ProInt</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header com navegação -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>Portfolio</h2>
+                </div>
+                
+                <!-- Menu hamburger para mobile -->
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#portfolio" class="nav-link">Portfólio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="search-container">
+                            <input type="text" id="search-input" placeholder="Pesquisar...">
+                            <button id="search-btn">🔍</button>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="theme-btn">🌙</button>
+                    </li>
+                    <li class="nav-item">
+                        <button id="login-btn" class="login-btn">Login</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seção Home com Carousel -->
+        <section id="home" class="hero">
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-slide active">
+                        <div class="slide-content">
+                            <h1>Bem-vindo ao meu Portfolio</h1>
+                            <p>Desenvolvedor Full Stack especializado em tecnologias modernas</p>
+                            <button class="cta-btn">Ver Projetos</button>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-content">
+                            <h1>Projetos Inovadores</h1>
+                            <p>Soluções criativas usando React, Node.js e muito mais</p>
+                            <button class="cta-btn">Saiba Mais</button>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-content">
+                            <h1>Experiência Comprovada</h1>
+                            <p>Mais de 50 projetos entregues com qualidade e pontualidade</p>
+                            <button class="cta-btn">Entre em Contato</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Controles do carousel -->
+                <button class="carousel-btn prev-btn" id="prev-btn">❮</button>
+                <button class="carousel-btn next-btn" id="next-btn">❯</button>
+                
+                <!-- Indicadores -->
+                <div class="carousel-indicators">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Portfolio com Filtros -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <h2>Meu Portfólio</h2>
+                
+                <!-- Filtros -->
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="react">React</button>
+                    <button class="filter-btn" data-filter="javascript">JavaScript</button>
+                    <button class="filter-btn" data-filter="php">PHP</button>
+                    <button class="filter-btn" data-filter="python">Python</button>
+                    <button class="filter-btn" data-filter="django">Django</button>
+                </div>
+                
+                <!-- Grid de projetos -->
+                <div class="projects-grid">
+                    <div class="project-card" data-category="react javascript">
+                        <div class="project-image">
+                            <div class="placeholder-img">React App</div>
+                        </div>
+                        <div class="project-info">
+                            <h3>E-commerce React</h3>
+                            <p>Aplicação completa de e-commerce desenvolvida em React com Redux</p>
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Redux</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="javascript">
+                        <div class="project-image">
+                            <div class="placeholder-img">JS Game</div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Jogo JavaScript</h3>
+                            <p>Jogo interativo desenvolvido com JavaScript puro e Canvas API</p>
+                            <div class="project-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Canvas</span>
+                                <span class="tag">HTML5</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="php">
+                        <div class="project-image">
+                            <div class="placeholder-img">PHP System</div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Sistema PHP</h3>
+                            <p>Sistema de gerenciamento desenvolvido em PHP com MySQL</p>
+                            <div class="project-tags">
+                                <span class="tag">PHP</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="python django">
+                        <div class="project-image">
+                            <div class="placeholder-img">Django API</div>
+                        </div>
+                        <div class="project-info">
+                            <h3>API Django</h3>
+                            <p>API REST desenvolvida com Django e Django REST Framework</p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Django</span>
+                                <span class="tag">REST API</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="react javascript">
+                        <div class="project-image">
+                            <div class="placeholder-img">React Dashboard</div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Dashboard React</h3>
+                            <p>Dashboard administrativo com gráficos e relatórios em tempo real</p>
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Chart.js</span>
+                                <span class="tag">Material-UI</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="python">
+                        <div class="project-image">
+                            <div class="placeholder-img">Python Bot</div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Bot Python</h3>
+                            <p>Bot de automação desenvolvido em Python para análise de dados</p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Pandas</span>
+                                <span class="tag">Selenium</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Informações de Contato</h3>
+                        <div class="contact-item">
+                            <span class="contact-label">Email:</span>
+                            <span class="contact-value" id="email-text">contato@portfolio.com</span>
+                            <button class="copy-btn" data-copy="contato@portfolio.com">Copiar</button>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Telefone:</span>
+                            <span class="contact-value">(11) 99999-9999</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Localização:</span>
+                            <span class="contact-value">São Paulo, SP</span>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nome:</label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="error-message" id="name-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Assunto:</label>
+                            <input type="text" id="subject" name="subject" required>
+                            <span class="error-message" id="subject-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensagem:</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <div class="char-counter">
+                                <span id="char-count">0</span> / 500 caracteres
+                            </div>
+                            <span class="error-message" id="message-error"></span>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Portfolio Web. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal de Login -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Usuário:</label>
+                    <input type="text" id="username" name="username" required>
+                    <span class="error-message" id="username-error"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                    <span class="error-message" id="password-error"></span>
+                </div>
+                
+                <button type="submit" class="submit-btn">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="back-to-top" class="back-to-top">
+        ↑
+    </button>
+
+    <!-- Toast Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/ui-enhancements.js"></script>
+</body>
+</html>
