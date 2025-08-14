@@ -6,7 +6,7 @@ Este projeto foi desenvolvido como trabalho final da disciplina **Programação 
 
 ## 👥 Equipe
 
-- **Desenvolvedor Principal**: [Seu Nome Aqui]
+- **Desenvolvedor Principal**: Fabrício, Francisnilto, Vanessa
 - **Disciplina**: Programação para Internet 1
 - **Professor**: Maykol
 - **Curso**: Análise e Desenvolvimento de Sistemas (ADS)
